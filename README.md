@@ -72,10 +72,22 @@ docs/todo/<需求名称>.md
 
 功能不再需要时，从需求中删掉对应要求，删除或划去旧任务。若还要清代码，另写一条未开始的清理任务，做完再勾选。
 
+## 作为 SkillBuddy 团队库
+
+本仓库可直接添加到 SkillBuddy 团队库。根目录的 `team-library.yaml` 是清单，`id` 为 `frontend-ai-workflow`。三个 skill 的发布副本在 `skills/`，与 `.agents/skills/` 内容对应。SkillBuddy 只扫描 `skills/`，不会读取 `.agents/skills/`。
+
+在 SkillBuddy 中填写本仓库的 Git 地址和分支即可。清单缺失或 `id`、`name`、`version` 不合法时，非空仓库不会被自动补齐。
+
 ## 仓库结构
 
 ```text
 frontend-ai-workflow/
+├── team-library.yaml
+├── policies/organization.yaml
+├── skills/
+│   ├── req-init/
+│   ├── req-todo/
+│   └── req-change/
 ├── .agents/skills/
 │   ├── req-init/
 │   ├── req-todo/

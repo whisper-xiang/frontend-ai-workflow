@@ -1,0 +1,5 @@
+version: 1
+id: frontend-ai-workflow
+name: AI 辅助前端工作流
+policies:
+  organization: policies/organization.yaml
